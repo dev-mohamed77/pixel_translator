@@ -5,7 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-
 app.post("/translate" , async (req, res)=>{
     try{
         const {message, from , to} = req.body;
