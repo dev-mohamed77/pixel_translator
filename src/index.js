@@ -3,7 +3,10 @@ const translate = require("translate-google");
 const app = express();
 
 
+
 app.use(express.json());
+
+app.use(express.urlencoded({extended: true}));
 
 app.post("/translate" , async (req, res)=>{
     try{
