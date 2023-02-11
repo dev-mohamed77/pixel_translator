@@ -3,6 +3,7 @@ const translate = require("translate-google");
 const cors = require("cors");
 const app = express();
 
+const post =  process.env.PORT || 3000 ;
 
 app.use(cors());
 
@@ -38,6 +39,6 @@ app.post("/translate" , async (req, res)=>{
 });
 
 
-app.listen(process.env.PORT || 3000 ,()=>{
-    console.log("server is run");
+app.listen(post,()=>{
+    console.log(`server is run ....${port}`);
 })
